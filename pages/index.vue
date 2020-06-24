@@ -6,7 +6,7 @@
         title="Free"
         icon="github-circle"
       >
-        Open source on <a href="https://github.com/buefy/buefy"> GitHub</a>
+        Open source on <a href="https://pcweb-conseils.com"> Pcweb</a>
       </card>
 
       <card
