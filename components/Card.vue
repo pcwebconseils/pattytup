@@ -2,9 +2,9 @@
   <div class="column">
     <div class="card">
       <header class="card-header">
-        <p class="card-header-title has-text-grey">
+        <h2 class="card-header-title has-text-grey">
           {{ title }}
-        </p>
+        </h2>
       </header>
       <div class="card-content">
         <div class="content has-text-centered">
