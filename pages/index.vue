@@ -1,5 +1,6 @@
 <template>
   <section class="section">
+    <h1>Hello world !</h1>
     <div class="columns is-mobile">
 
       <card class="column"
