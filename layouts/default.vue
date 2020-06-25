@@ -86,7 +86,7 @@ body{
 }
 
 .fa {
-    color: black;
+    color: rgb(30, 183, 221);
 }
 
 </style>
