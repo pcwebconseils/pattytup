@@ -4,7 +4,7 @@
         <nuxt />
 
         <div class="barnav">  
-          <ul>
+          <ul class="navicone">
             <li>
               <nuxt-link to="/">
               <i class="fa fa-home" aria-hidden="true"></i>
@@ -34,7 +34,7 @@
 <style langue="css">
 
 body{background-color: lightblue;}
-.barnav ul{
+.barnav .navicone{
 
   background-color: white;
   position: fixed;
@@ -46,7 +46,8 @@ body{background-color: lightblue;}
     
 }
 
-ul{ 
+          
+.navicone{ 
   margin-left: 0;
     height:25vh;
     padding: 5px;
