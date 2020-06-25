@@ -47,11 +47,9 @@ ul{
     flex-direction : row; 
     justify-content: space-around; 
     
-};
- 
-i {
-    color: black;
 }
+ 
+
 .fa {
     color: black;
 }
