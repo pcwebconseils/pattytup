@@ -1,8 +1,6 @@
 <template>
       <div >
-       
-        <nuxt />
-        <div class="navbar">  
+
           <ul>
             <li>
               <nuxt-link to="/">
@@ -26,32 +24,4 @@
             </li>
           </ul>
           </div>
-      </div> 
-</template>
 
-<style langue="css">
-
-.navbar ul{
- overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  border-top: black solid 1px;
-    
-}
-
-ul{ 
-    
-    padding: 5px;
-    display: flex; 
-    flex-direction : row; 
-    justify-content: space-around; 
-    
-}
- 
-
-.fa {
-    color: black;
-}
-
-</style>
