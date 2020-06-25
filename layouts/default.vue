@@ -1,8 +1,10 @@
 <template>
-  <div class="content">
+  <div class="content" id="anchor1">
 
         <nuxt />
+        
 
+        <a class="retour"><nuxt-link :to="{path: '/', hash: '#anchor1'}" class="button">^</nuxt-link></a>
         <div class="barnav">  
           <ul class="navicone">
             <li>
@@ -33,7 +35,10 @@
 
 <style langue="css">
 
-body{background-color: lightblue;}
+body{
+  /* background-color: lightblue; */
+  height: 10000px;
+  }
 .barnav .navicone{
 
   background-color: white;
@@ -46,7 +51,29 @@ body{background-color: lightblue;}
     
 }
 
-          
+       .retour, .retour:visited{
+         position: fixed;
+         right: 5px;
+         bottom:25.5vh;
+         text-decoration: none;
+       }   
+
+       .button, .button:visited{
+         background-color: white;
+         color: lightblue;
+         font-size: 1.8em;
+         
+         
+       }
+
+
+       .button:hover{
+         background-color: lightblue;
+         color: white;
+         text-decoration: none;
+         }
+
+
 .navicone{ 
   margin-left: 0;
     height:25vh;
