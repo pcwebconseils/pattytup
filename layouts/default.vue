@@ -25,7 +25,7 @@
       </div>
     </nav>
 
-    <section class="main-content columns">
+    <section class="main-content columns is-mobile">
 
       <aside class="column is-2 section">
         <p class="menu-label is-hidden-touch">General</p>
