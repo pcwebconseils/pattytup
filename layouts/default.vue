@@ -9,22 +9,22 @@
           <ul class="navicone">
             <li>
               <nuxt-link to="/">
-              <i class="fa fa-home" aria-hidden="true"></i>
+              <i class="fa fa-home fa-2x" aria-hidden="true"></i>
               </nuxt-link>
             </li>
             <li>
                <nuxt-link to="/">
-              <i class="fa fa-cutlery" aria-hidden="true"></i>
+              <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
               </nuxt-link>
             </li>
             <li>
                <nuxt-link to="/">
-              <i class="fa fa-book" aria-hidden="true"></i>
+              <i class="fa fa-book fa-2x" aria-hidden="true"></i>
               </nuxt-link>
             </li>
             <li>
                <nuxt-link to="/">
-              <i class="fa fa-address-card-o" aria-hidden="true"></i>
+              <i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i>
               </nuxt-link>
             </li>
           </ul>
@@ -86,7 +86,7 @@ body{
 }
 
 .fa {
-    color: rgb(30, 183, 221);
+    color: #6db6ca;
 }
 
 </style>
