@@ -18,7 +18,7 @@
       </section>
     </div>
     <section>
-      <h3 class="centre trait title is-4">Recettes de la semaine</h3>
+      <h3 class="centre trait title is-4 ">Recettes de la semaine</h3>
       <p class="centre">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
@@ -62,5 +62,8 @@ export default {
 }
 .trait:after {
   margin-left: 0.3rem;
+}
+.centre{
+  margin-bottom: 2em;
 }
 </style>
