@@ -1,4 +1,5 @@
 <template>
+
   <main class="">
     <div class="root2 is-hidden-touch"></div>
     <div>
@@ -6,6 +7,14 @@
       <section class="media">
         <div class="media-left">
           <figure class="image is-128x128 patty">
+
+  <div>
+    <div>
+      <p class="centre">logo-image</p>
+      <section class="media">
+        <div class="media-left">
+          <figure class="image is-128x128">
+
             <img src="../assets/pattytup.jpg" />
           </figure>
         </div>
@@ -21,6 +30,7 @@
     <section>
       <h3 class="centre trait title is-4 ">Recettes de la semaine</h3>
       <p class="centre">
+
         Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
       
@@ -48,12 +58,17 @@
         <button class="btn-more">Découvrir plus</button>
         <div class="root"></div>
     </section>
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+
     </section>
     <section>
       <h3 class="centre trait title is-4">Produits du moment</h3>
       <p class="centre">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
+
 
       <section>
         <div class="columns recipe-section">
@@ -83,6 +98,10 @@
 
     </section>
   </main>
+
+    </section>
+  </div>
+
 </template>
 
 <script>
@@ -99,9 +118,12 @@ export default {
 
 <style lang="css">
 
+
 .patty{
   z-index: -1;
 } 
+
+
 
 .centre {
   text-align: center;
@@ -124,6 +146,7 @@ export default {
 .centre{
   margin-bottom: 2em;
 }
+
 
 * {
     margin: 0;
@@ -270,5 +293,6 @@ section {
     cursor: pointer;
     transition: 0.5s;
 }
+
 
 </style>

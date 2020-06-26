@@ -1,4 +1,5 @@
 <template>
+
 <main>
  <!-- barre de navigation desktop -->
   <div class="content" id="anchor1"></div>
@@ -18,15 +19,23 @@
         </nav>
         </div>
 
+  <div class="content" id="anchor1">
+
+
       <!-- contenu -->
         <nuxt />
       
       <!-- footer desktop -->
 
 
+
       <!-- barre de navigation mobile/tablet -->
         <div class="is-hidden-desktop">
         <a href="/#anchor1" class="button retour is-hidden-desktop">^</a>
+
+
+        <a class="retour"><nuxt-link :to="{path: '/', hash: '#anchor1'}" class="button">^</nuxt-link></a>
+
         <div class="barnav">
           <ul class="navicone">
             <li>
@@ -51,12 +60,18 @@
             </li>
           </ul>
           </div>
+
         </div>
   
   </main>
+
+
+  </div>
+
 </template>
 
 <style langue="css">
+
 
 
 /* Desktop format */
@@ -161,6 +176,8 @@ a:hover {
 
 
 /* css mobile/tablet */
+
+
 body{
   /* background-color: lightblue; */
   height: 10000px;
@@ -179,21 +196,36 @@ body{
 
        .retour, .retour:visited{
          position: fixed;
+
          right: 4%;
+
+         right: 5px;
+
          bottom:25.5vh;
          text-decoration: none;
        }
 
        .button, .button:visited{
          background-color: white;
+
          color: #6db6ca;
          font-size: 1.8em;
+
+
+         color: lightblue;
+         font-size: 1.8em;
+
+
 
        }
 
 
        .button:hover{
+
          background-color: #6db6ca;
+
+         background-color: lightblue;
+
          color: white;
          text-decoration: none;
          }
