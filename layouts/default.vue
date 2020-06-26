@@ -180,7 +180,7 @@ a:hover {
 
 body{
   /* background-color: lightblue; */
-  height: 10000px;
+  /*height: 100vh;*/
   }
 .barnav .navicone{
 
