@@ -18,8 +18,12 @@
       </section>
     </div>
     <section>
-      <br />
-      <br />
+      <h3 class="centre trait title is-4">Recettes de la semaine</h3>
+      <p class="centre">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </section>
+    <section>
       <h3 class="centre trait title is-4">Produits du moment</h3>
       <p class="centre">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
