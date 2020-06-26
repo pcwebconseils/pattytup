@@ -6,8 +6,10 @@
       <p class="centre is-hidden-desktop">logo-image</p>
       <section class="media">
         <div class="media-left">
-          <figure class="image is-128x128 patty">
-
+          <figure class="image is-128x128 patty"></figure>
+        </div>
+      </section>
+    </div>
   <div>
     <div>
       <p class="centre">logo-image</p>
@@ -33,7 +35,7 @@
 
         Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
-      
+
     <section>
         <div class="columns product-section">
             <div class="column is-3-desktop is-12-mobile product-card">
@@ -60,7 +62,6 @@
     </section>
 
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
 
     </section>
     <section>
@@ -97,11 +98,8 @@
     </section>
 
     </section>
-  </main>
-
-    </section>
   </div>
-
+  </main>
 </template>
 
 <script>
@@ -121,7 +119,7 @@ export default {
 
 .patty{
   z-index: -1;
-} 
+}
 
 
 

@@ -24,7 +24,7 @@
 
       <!-- contenu -->
         <nuxt />
-      
+
       <!-- footer desktop -->
 
 
@@ -62,7 +62,7 @@
           </div>
 
         </div>
-  
+  </div>
   </main>
 
 
