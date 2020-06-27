@@ -65,7 +65,7 @@
   </div>
 
 <footer>
-  <nav class="is-hidden-touch footer">
+  <nav class="is-hidden-touch bas">
     <ul>
       <li>Mentions légales</li>
       <li>Mentions légales</li>
@@ -150,6 +150,7 @@ a:hover {
 }
 
 .searchbar {
+  width: 75%;
     background-color: #86BFD1;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -195,30 +196,27 @@ body{
   overflow: hidden;
   bottom: 0;
   width: 100%;
-  border-top: black solid 1px;
+  border-top: #6db6ca solid 2px;
   list-style-type: none;
+  margin: 0;
 
 }
 
        .retour, .retour:visited{
          position: fixed;
-
-         right: 4%;
-
-         right: 5px;
-
-         bottom:25.5vh;
+          right: 5%;
+         bottom:18vh;
          text-decoration: none;
        }
 
        .button, .button:visited{
-         background-color: white;
+         background-color: rgba(52, 146, 223, 0.281);
 
-         color: #6db6ca;
+         color: rgba(109, 182, 202, 0.459);
          font-size: 1.8em;
 
 
-         color: lightblue;
+         color: rgba(173, 216, 230, 0.411);
          font-size: 1.8em;
 
 
@@ -238,20 +236,28 @@ body{
 
 
 .navicone{
-  margin-left: 0;
-    height:25vh;
+    height:15vh;
     padding: 5px;
     display: flex;
     flex-direction : row;
     justify-content: space-around;
-
-
 }
 
 .fa {
     color: #6db6ca;
 }
-
+.bas ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #6DB6CA;
+  width: 100%;
+  height: 5vh;
+}
+.bas ul li{
+  height: 80%;
+  color: aliceblue;
+}
 
 
 </style>
