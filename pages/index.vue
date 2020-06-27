@@ -249,14 +249,15 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
     font-weight: bolder;
-    margin-top: 1%;
+    margin-top: 2em;
 }
 
 .description-recipe {
     font-family: 'Montserrat', sans-serif;
     font-size: 17px;
     text-align: justify;
-    margin-top: 1%;
+    margin: 2em;
+  
 }
 
 /* Bouton */
