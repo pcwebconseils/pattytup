@@ -63,9 +63,11 @@
 
         </div>
   </div>
-  </main>
 
-
+<footer>
+  <nav>hello</nav>
+</footer>
+ </main>
   </div>
 
 </template>
