@@ -65,7 +65,12 @@
   </div>
 
 <footer>
-  <nav>hello</nav>
+  <nav class="is-hidden-touch footer">
+    <ul>
+      <li>Mentions légales</li>
+      <li>Mentions légales</li>
+    </ul>
+  </nav>
 </footer>
  </main>
 
