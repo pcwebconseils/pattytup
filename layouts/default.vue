@@ -68,7 +68,6 @@
   <nav>hello</nav>
 </footer>
  </main>
-  </div>
 
 </template>
 
@@ -181,7 +180,7 @@ a:hover {
 
 
 body{
-  /* background-color: lightblue; */
+  background-color: rgba(190, 236, 252, 0.144); 
   /*height: 100vh;*/
   }
 .barnav .navicone{
