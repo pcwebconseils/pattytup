@@ -65,7 +65,7 @@
   </div>
 
 <footer>
-  <nav class="is-hidden-touch footer">
+  <nav class="is-hidden-touch bas">
     <ul>
       <li>Mentions légales</li>
       <li>Mentions légales</li>
@@ -150,6 +150,7 @@ a:hover {
 }
 
 .searchbar {
+  width: 75%;
     background-color: #86BFD1;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -245,7 +246,18 @@ body{
 .fa {
     color: #6db6ca;
 }
-
+.bas ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #6DB6CA;
+  width: 100%;
+  height: 5vh;
+}
+.bas ul li{
+  height: 80%;
+  color: aliceblue;
+}
 
 
 </style>
