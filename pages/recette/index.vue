@@ -1,196 +1,99 @@
 <template>
-     <div class="container">
+
+<div class="container">
+    <section>
+
+    
         <div class="recipe-section">
             <h1 class="section-title">—— Découvrez nos recettes ——</h1>
         </div>
 
-        <section>
-            <h2 class="section-title">—— Nos entrées ——</h2>
-            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur.</p>
-            <div class="columns product-section">
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets/plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets/plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets\plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-            </div>
-        </section>
+    </section>
 
-        <section>
-            <h2 class="section-title">—— Nos plats ——</h2>
-            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur.</p>
-            <div class="columns product-section">
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets\plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets\plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets\plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="dessert">
-            <h2 class="section-title">—— Nos desserts ——</h2>
-            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur.</p>
-            <div class="columns product-section">
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets\plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets/plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-                <div class="column is-4-desktop is-12-mobile recipe-card">
-                    <img src="assets/plat.jpg" alt="Image du produit" class="img-cat">
-                    <a href="#" class="name-cat-recipe">Catégorie de recette</a>
-                </div>
-            </div>
-        </section>
-    </div>
+    <section class="container" id="posts">
+        <RecettePreview
+            v-for="post in posts"
+            :key="post.id"
+            :categorie="post.categorie"
+            :nom="post.nom"
+            :thumbnailImage="post.thumbnailUrl"
+            :id="post.id" />
+  </section>
+</div>
 </template>
 
+<script>
+// importe du component RecettePreview
+    import RecettePreview from "@/components/Recette/RecettePreview";
+    export default {
+        components: {
+            RecettePreview
+        },
+        asyncData(context){
+            return context.app.$storyapi.get('cdn/stories',
+            {version: 'draft',
+            starts_with:'recette/'
+            }).then(res => {
+                console.log(res);
+                 // array de data recuperer sur storyblok
+                return {posts: res.data.stories.map(bp =>{
+                    return{
+                        id:bp.slug,
+                        categorie: bp.content.categorie_recette,
+                        nom: bp.content.nom_recette,
+                        thumbnailUrl: bp.content.photo_recette.filename
+
+                    };
+
+                })
+            };
+            });
+        }
+
+    };
+</script>
+
+
 <style scoped>
-/* Recettes */
 
-.recipe-section {
-    justify-content: center;
+.container{
+    padding-top: 0rem;
 }
 
-.recipe-card {
-    display: flex;
-    flex-direction: column;
-    margin-right: 1%;
-    justify-content: center;
-}
 
-.img-recipe {
-    object-fit: cover !important;
-    width: 100%;
-    height: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cat-recipe {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    color: #6DB6CA;
-    margin-top: 1%;
-}
-
-.name-recipe {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    font-weight: bolder;
-    margin-top: 1%;
-}
-
-.description-recipe {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    text-align: justify;
-    margin-top: 1%;
-}
-
-@media only screen and (max-width: 770px) {
-    .recipe-card {
-        display: flex;
-        flex-direction: column;
-        padding: 6%;
-        justify-content: center;
-    }
-  }
-
-  .recipe-section {
-    justify-content: center;
-    text-align: center;
-}
-
-.recipe-section > .section-title {
+.section-title {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
+  
 }
 
-.recipe-card {
-    display: flex;
-    flex-direction: column;
+.section-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-style: italic;
     text-align: center;
-}
-
-.img-cat {
-    object-fit: cover !important;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.name-cat-recipe {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    font-weight: bolder;
     margin-top: 1%;
-    transition: 0.3s;
+    margin-bottom: 5%;
 }
 
-.name-cat-recipe:hover {
-    color: #6DB6CA;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    font-weight: bolder;
-    margin-top: 1%;
-    transition: 0.3s;
+
+
+#posts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
 }
 
-@media only screen and (max-width: 770px) {
-    .img-cat {
-        object-fit: cover !important;
-        width: 70%;
-        max-height: 400px;
-        height: auto;
-    }
-  }
 
-@media only screen and (max-width: 500px) {
-    .img-cat {
-        object-fit: cover !important;
-        width: 70%;
-        max-height: 270px;
-        height: auto;
-    }
-  }
-
-@media only screen and (max-width: 375px) {
-    .img-cat {
-        object-fit: cover !important;
-        width: 70%;
-        max-height: 200px;
-        height: auto;
-    }
-  }
-
-
-@media screen and (max-width: 1024px){
-
-.dessert{
-  margin-bottom: 13rem;
-}
+@media screen and ( min-width: 1024px){
+    /* .container{padding-top: 3.5rem;} */
+    #posts{
+        flex-direction: row;
+    };
 }
 
 </style>

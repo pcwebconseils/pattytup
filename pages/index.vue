@@ -36,7 +36,9 @@
                     <span class="price-product">15,00 €</span>
                 </div>
             </div>
-            <button class="btn-more">Découvrir plus</button>
+            <div>
+           
+            <nuxt-link to="./produit"><a class="btn-more">Découvrir plus</a></nuxt-link></div>
         </section>
         <!-- Section meilleures ventes -->
         <section>

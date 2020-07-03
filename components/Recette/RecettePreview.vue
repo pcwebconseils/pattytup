@@ -1,18 +1,19 @@
 <template>
 
-<!-- carte produit avec lien vers single page -->
-    <nuxt-link
+
+
+<!-- carte recette avec lien vers single page -->
+    <nuxt-link   
         :to="id">
-        <div class="post-preview  product-section">
+        <article class="post-preview">
             <div
                 :style="{backgroundImage: 'url(' + thumbnailImage + ')'}"
                 class="post-preview-thumbnail"></div>
                 <div class="post-preview-content">
-                  <span class="cat-product">{{ categorie }}</span>
-                 <p class="name-product">{{ nom }}</p>
-                 <span class="price-product">{{ prix }}</span>
+                 <h1 class="cat-product">{{ categorie }}</h1>
+                  <p class="name-product">{{ nom }}</p>
             </div>
-        </div>
+        </article>
     </nuxt-link>
 </template>
 
@@ -24,10 +25,6 @@ export default {
             required: true
         },
         nom: {
-            type: String,
-            required: true
-        },  
-        prix: {
             type: String,
             required: true
         },
@@ -46,17 +43,41 @@ export default {
 
 <style scoped>
 
-
-
-/* css carte produit */
-
-
-
+/* css carte recette */
 
 
 *{
     box-sizing:border box
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.post-preview{
+    border-radius: 3px;
+    border: black solid 1px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+    width: 90%;
+    margin: auto;
+    height: 20rem;
+}
+
+.post-preview-thumbnail{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    width:100% ;
+    height: 10rem;
+}
+
+.post-preview-cotent{
+    text-align: center;
+    padding: 1rem;
+}
+
 
 a{
     text-decoration: none;
@@ -88,33 +109,6 @@ a{
 }
 
 
-
-.cat-product {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    color: #6DB6CA;
-    margin-top: 1%;
-}
-
-.name-product, .price-product {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    font-weight: bolder;
-    margin-top: 1%;
-    transition: 0.5s;
-}
-
-.name-product:hover {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    font-weight: bolder;
-    margin-top: 1%;
-    color: #6DB6CA;
-    transition: 0.5s;
-}
-
-
 @media screen and (min-width: 35rem){
     .post-preview{
         width: 25rem;
@@ -123,6 +117,4 @@ a{
     }
     
 }
-
-
 </style>

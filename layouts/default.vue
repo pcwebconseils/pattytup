@@ -1,7 +1,7 @@
 <template>
 <main>
  <!-- barre de navigation desktop -->
-  <div class="content" id="anchor1"></div>
+  <div class="content is-hidden-desktop" id="anchor1"></div>
   <div class="is-hidden-touch">
           <nav class="columns navigation-d">
             <img class="column is-2 logo" src="../assets/logo.svg" alt="Logo">
@@ -92,6 +92,10 @@
 </script>
 
 <style langue="css">
+
+/* css barre de nav */
+
+
 * {
     margin: 0;
     padding: 0;

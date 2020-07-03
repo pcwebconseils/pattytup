@@ -59,43 +59,43 @@
 </template>
 
 <script>
+// importe du component PostPreview
     import PostPreview from "@/components/Posts/PostPreview";
     export default {
         components: {
             PostPreview
         },
-        data() {
-            return {
-                posts: [
-                    {
-                        categorie: "nom categorie",
-                        nom: "nom produit",
-                        prix: "15€",
-                        thumbnailUrl: "https://m.media-amazon.com/images/I/71anlsy6v6L._SS500_.jpg",
-                        id: "first-cook"
-                    }, {
-                        categorie: "nom 2eme categorie",
-                        nom: "nom 2eme produit",
-                        prix: "15€",
-                        thumbnailUrl: "https://m.media-amazon.com/images/I/71anlsy6v6L._SS500_.jpg",
-                        id: "second-cook"
-                    }
-                ]
-            };
-        }
+        asyncData(context){
+            return context.app.$storyapi.get('cdn/stories',
+            {version: 'draft',
+            starts_with:'produit/'
+            }).then(res => {
+                console.log(res);
+                // array de data recuperer sur storyblok
+                return {posts: res.data.stories.map(bp =>{
+                    return{
+                        id:bp.slug,
+                        categorie: bp.content.categorie_produit,
+                        nom: bp.content.nom_produit,
+                        prix: bp.content.prix,
+                        thumbnailUrl: bp.content.image_produit.filename
 
+                    };
+
+                })
+            };
+            });
+        }
+  
     };
 </script>
 
 
 <style scoped>
-
+/* css produit et filtre */
 .container{
+    
     padding-top: 0rem;
-}
-
-@media screen and ( min-width: 1024px){
-    .container{padding-top: 3.5rem;}
 }
 
 .section-title {
@@ -118,14 +118,14 @@
 
 
 #posts{
-    padding-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
    
 }
 
-product-section {
+.product-section {
     justify-content: center;
     text-align: center;
 }
@@ -169,6 +169,14 @@ product-section {
 
 .product-section {
     justify-content: center;
+}
+
+
+@media screen and ( min-width: 1024px){
+    /* .container{padding-top: 3.5rem;} */
+    #posts{
+        flex-direction: row;
+    };
 }
 
 </style>
