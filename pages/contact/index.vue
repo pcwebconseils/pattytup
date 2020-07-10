@@ -10,11 +10,13 @@
         <!--Formulaire-->
         <div class="columns contact-page">
             <div class="form column is-5-desktop is-12-mobile form-contact">
+                    <!-- lien https a changé lors de la création du compte formspree -->
+            <form action="https://formspree.io/xrgyynqw" method="POST">
                 <h2 class="contact-title">Envoyez-nous un message</h2>
                 <div class="field">
-                    <label class="label">Nom</label>
+                    <label class="label" name="name">Nom</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input" type="text" placeholder="Votre nom">
+                        <input class="input" type="text" placeholder="Votre nom" name="name">
                         <span class="icon is-small is-left">
                             <i class="fas fa-user"></i>
                         </span>
@@ -23,7 +25,7 @@
                 <div class="field">
                     <label class="label">Email</label>
                     <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Votre email">
+                        <input class="input" type="email" placeholder="Votre email" name="_replyto">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -32,13 +34,14 @@
                 <div class="field">
                     <label class="label">Message</label>
                     <div class="control">
-                        <textarea class="textarea" placeholder="Votre message"></textarea>
+                        <textarea class="textarea" placeholder="Votre message" name="message"></textarea>
                     </div>
                 </div>
                 <!--Bouton-->
                 <div class="btn">
-                    <button class="btn-contact">Envoyer</button>
+                      <input class="btn-contact" type="submit" value="Envoyer">
                 </div>
+            </form>
             </div>
             <!--Deuxième boite-->
             <div class="column is-5-desktop is-12-mobile coord">
