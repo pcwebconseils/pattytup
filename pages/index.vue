@@ -1,128 +1,175 @@
 <template>
-
-  <main class="">
-    <div class="root2 is-hidden-touch"></div>
-    <div>
-      <p class="centre is-hidden-desktop">logo-image</p>
-      <section class="media">
-        <div class="media-left">
-          <figure class="image is-128x128 patty">
-
-  <div>
-    <div>
-      <p class="centre">logo-image</p>
-      <section class="media">
-        <div class="media-left">
-          <figure class="image is-128x128">
-
-            <img src="../assets/pattytup.jpg" />
-          </figure>
-        </div>
-        <div class="media-content">
-          <h1 class="title centre">Pattytup <br> Tupperware et recettes</h1>
-          <h2 class="centre">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat qui
-            nemo soluta laboriosam.
-          </h2>
-        </div>
-      </section>
+   <div class="container">
+        <!-- Header -->
+        <header class="head-col">
+            <img src="../assets/fotolia.png" alt="Logo et image d'accueil" class="head-img">
+            <div class="head-text">
+                <h1 class="head-title">Pattytup</h1>
+                <p class="head-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error aspernatur quisquam et enim
+                    eaque voluptate
+                    odit repellendus possimus a. Dolorum commodi earum cumque a corrupti suscipit, aut tenetur.
+                </p>
+            </div>
+        </header>
+        <!-- Section produits du moment -->
+        <section>
+            <h2 class="section-title">—— Produits du moment ——</h2>
+            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur.</p>
+            <div class="columns product-section">
+                <div class="column is-4-desktop is-12-mobile product-card">
+                    <img src="../assets/product3.jpg" alt="Image du produit" class="img-product">
+                    <span class="cat-product">Catégorie du produit</span>
+                    <a href="#" class="name-product">Nom du produit</a>
+                    <span class="price-product">15,00 €</span>
+                </div>
+                <div class="column is-4-desktop is-12-mobile product-card">
+                    <img src="../assets/product3.jpg" alt="Image du produit" class="img-product">
+                    <span class="cat-product">Catégorie du produit</span>
+                    <a href="#" class="name-product">Nom du produit</a>
+                    <span class="price-product">15,00 €</span>
+                </div>
+                <div class="column is-4-desktop is-12-mobile product-card">
+                    <img src="../assets/product3.jpg" alt="Image du produit" class="img-product">
+                    <span class="cat-product">Catégorie du produit</span>
+                    <a href="#" class="name-product">Nom du produit</a>
+                    <span class="price-product">15,00 €</span>
+                </div>
+            </div>
+            <div>
+           
+            <nuxt-link to="/produit"><a class="btn-more">Découvrir plus</a></nuxt-link></div>
+        </section>
+        <!-- Section meilleures ventes -->
+        <section>
+            <h2 class="section-title">—— Meilleures ventes ——</h2>
+            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur.</p>
+            <div class="columns product-section">
+                <div class="column is-4-desktop is-12-mobile product-card">
+                    <img src="../assets/product3.jpg" alt="Image du produit" class="img-product">
+                    <span class="cat-product">Catégorie du produit</span>
+                    <a href="#" class="name-product">Nom du produit</a>
+                    <span class="price-product">15,00 €</span>
+                </div>
+                <div class="column is-4-desktop is-12-mobile product-card">
+                    <img src="../assets/product3.jpg" alt="Image du produit" class="img-product">
+                    <span class="cat-product">Catégorie du produit</span>
+                    <a href="#" class="name-product">Nom du produit</a>
+                    <span class="price-product">15,00 €</span>
+                </div>
+                <div class="column is-4-desktop is-12-mobile product-card">
+                    <img src="../assets/product3.jpg" alt="Image du produit" class="img-product">
+                    <span class="cat-product">Catégorie du produit</span>
+                    <a href="#" class="name-product">Nom du produit</a>
+                    <span class="price-product">15,00 €</span>
+                </div>
+            </div>
+            <div>
+            <nuxt-link to="/produit"><a class="btn-more">Découvrir plus</a></nuxt-link></div>
+        </section>
+        <!-- Section denrières recettes -->
+        <section>
+            <h2 class="section-title">—— Dernières recettes ——</h2>
+            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur.</p>
+            <div class="columns recipe-section">
+                <div class="column is-6-desktop is-12-mobile recipe-card">
+                    <img src="../assets/recipe.jpg" alt="Image de couverture pour la recette" class="img-recipe">
+                    <span class="cat-recipe">Catégorie de la recette</span>
+                    <a href="#" class="name-recipe">Nom de la recette</a>
+                    <p class="description-recipe">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore sint natus amet, veniam
+                        voluptate
+                        ipsa voluptatem voluptates voluptatum suscipit, cumque error labore vel itaque laboriosam nobis
+                        magni
+                        excepturi eveniet libero.
+                    </p>
+                </div>
+                <div class="column is-6x-desktop is-12-mobile recipe-card">
+                    <img src="../assets/recipe.jpg" alt="Image de couverture pour la recette" class="img-recipe">
+                    <span class="cat-recipe">Catégorie de la recette</span>
+                    <a href="#" class="name-recipe">Nom de la recette</a>
+                    <p class="description-recipe">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore sint natus amet, veniam
+                        voluptate
+                        ipsa voluptatem voluptates voluptatum suscipit, cumque error labore vel itaque laboriosam nobis
+                        magni
+                        excepturi eveniet libero.
+                    </p>
+                </div>
+            </div>
+          <div>
+            <nuxt-link to="/recette"><a class="btn-more">Découvrir plus</a></nuxt-link></div>
+        </section>
+        <!-- Section service Pattytup -->
+        <section class="service">
+            <h2 class="section-title">—— Service Pattytup ——</h2>
+            <p class="section-desc">Lorem ipsum dolor sit amet, consectetur.</p>
+            <div class="columns">
+                <div class="column is-4-desktop is-12-mobile">
+                    <img src="../assets/gift.svg" alt="Illustration" width="100">
+                    <h3 class="serv-title">Produits de qualité</h3>
+                    <p class="serv-desc">Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+                <div class="column is-4-desktop is-12-mobile">
+                    <img src="../assets/food-service.svg" alt="Illustration" width="100">
+                    <h3 class="serv-title">Service après vente</h3>
+                    <p class="serv-desc">Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+                <div class="column is-4-desktop is-12-mobile">
+                    <img src="../assets/return.svg" alt="Illustration" width="100">
+                    <h3 class="serv-title">Retour sous 30 jours</h3>
+                    <p class="serv-desc">Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+            </div>
+            <div>
+            <nuxt-link to="/contact"><a class="btn-more">Nous contacter</a></nuxt-link></div>
+        </section>
     </div>
-    <section>
-      <h3 class="centre trait title is-4 ">Recettes de la semaine</h3>
-      <p class="centre">
-
-        Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-      
-    <section>
-        <div class="columns product-section">
-            <div class="column is-3-desktop is-12-mobile product-card">
-                <img src="../assets/product.jpg" alt="Image du produit" class="img-product">
-                <span class="cat-product">Catégorie du produit</span>
-                <a href="#" class="name-product patty">Nom du produit</a>
-                <span class="price-product">15,00 €</span>
-            </div>
-            <div class="column is-3-desktop is-12-mobile product-card">
-                <img src="../assets/product2.jpg" alt="Image du produit" class="img-product">
-                <span class="cat-product">Catégorie du produit</span>
-                <a href="#" class="name-product patty">Nom du produit</a>
-                <span class="price-product">15,00 €</span>
-            </div>
-            <div class="column is-3-desktop is-12-mobile product-card">
-                <img src="../assets/product3.jpg" alt="Image du produit" class="img-product">
-                <span class="cat-product">Catégorie du produit</span>
-                <a href="#" class="name-product patty">Nom du produit</a>
-                <span class="price-product">15,00 €</span>
-            </div>
-        </div>
-        <button class="btn-more">Découvrir plus</button>
-        <div class="root"></div>
-    </section>
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-
-    </section>
-    <section>
-      <h3 class="centre trait title is-4">Produits du moment</h3>
-      <p class="centre">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
-
-
-      <section>
-        <div class="columns recipe-section">
-            <div class="column is-4 recipe-card">
-                <img src="../assets/recipe.jpg" alt="Image de couverture pour la recette" class="img-recipe">
-                <span class="cat-recipe">Catégorie de la recette</span>
-                <a href="#" class="name-recipe patty">Nom de la recette</a>
-                <p class="description-recipe">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore sint natus amet, veniam voluptate
-                    ipsa voluptatem voluptates voluptatum suscipit, cumque error labore vel itaque laboriosam nobis magni
-                    excepturi eveniet libero.
-                </p>
-            </div>
-            <div class="column is-4 recipe-card">
-                <img src="../assets/recipe.jpg" alt="Image de couverture pour la recette" class="img-recipe">
-                <span class="cat-recipe">Catégorie de la recette</span>
-                <a href="#" class="name-recipe patty">Nom de la recette</a>
-                <p class="description-recipe">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore sint natus amet, veniam voluptate
-                    ipsa voluptatem voluptates voluptatum suscipit, cumque error labore vel itaque laboriosam nobis magni
-                    excepturi eveniet libero.
-                </p>
-            </div>
-        </div>
-        <button class="btn-more">Découvrir plus</button>
-    </section>
-
-    </section>
-  </main>
-
-    </section>
-  </div>
-
 </template>
 
 <script>
-import Card from "~/components/Card";
 
-export default {
-  name: "HomePage",
-
-  components: {
-    Card
-  }
-};
 </script>
 
 <style lang="css">
 
+@media screen and (min-width: 1024px) {
+  .container {margin-top:10rem;}
+}
 
-.patty{
-  z-index: -1;
-} 
+.container
+{
+ z-index: 1;}
 
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-img {
+    width: 250px;
+}
+
+.head-text {
+    width: 50%;
+    margin-left: 4%;
+}
+
+.head-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.head-desc {
+    text-align: justify;
+    margin-top: 3%;
+}
 
 
 .centre {
@@ -146,7 +193,6 @@ export default {
 .centre{
   margin-bottom: 2em;
 }
-
 
 * {
     margin: 0;
@@ -172,8 +218,8 @@ a:hover {
 }
 
 .root {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 4%;
+    margin-bottom: 4%;
 }
 
 /* Produits */
@@ -218,6 +264,43 @@ section {
     margin-top: 1%;
 }
 
+/*titre section*/
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.section-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 430px) {
+    .section-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .section-desc {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        text-align: center;
+        margin-top: 1%;
+        margin-bottom: 5%;
+    }
+  }
 
 /* Recettes */
 
@@ -295,4 +378,11 @@ section {
 }
 
 
+/*service*/
+@media screen and (max-width: 1024px){
+
+.service{
+  margin-bottom: 16rem;
+}
+}
 </style>
